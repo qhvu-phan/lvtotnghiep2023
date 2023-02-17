@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/font/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <title>Manager</title>
+  </head>
+
+  <body>
+    <div class="admin-main">
+      <div class="admin-nav-container">
+          <div class="admin-nav-title">
+             Quản Trị
+          </div>
+          <div class="admin-nav-user_admin">
+            <div class="user_admin-image">
+                <img src="./img/admin.jpg" alt="admin.jpg" width="50px" height="50px" >
+            </div>
+            <div class="user_admin-info">
+              <div class="user_admin-name">
+                <label> <%- username %> </label>
+              </div>
+             <div class="user_admin-role">
+              <label>Quản Trị Viên</label>
+             </div>       
+            </div>
+          </div>
+          <div class="admin-nav-order-container">
+            <div class="order-new order-container-all admin-manager-order_new">
+              <i class="far fa-newspaper"></i>  Đơn hàng mới <label class="index_new_order" for="">(0)</label>
+            </div>
+            <div class="order-manager order-container-all admin-manager-order">
+              <i class="far fa-edit"></i> Quản lí đơn hàng
+            </div>
+            <div class="product-manager order-container-all admin-manager-product">
+              <i class="fas fa-tasks"></i> Quản lí sản phẩm
+            </div>
+          </div>
+          <div class="admin-nav-logout logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </div>
+      </div>
+      <div class="admin-content-container">
+             <div class="admin-content-order">
+                  <div class="admin-content-handle_product">
+                    <div class="admin-content_handle_product">
+                      <div class="product_add-manager order-container-all admin-manager-product">
+                        <i class="fas fa-plus"></i> Thêm sản phẩm
+                      </div>
+                    </div>
+                    <div class="admin-content_show-product"></div> 
+                  </div>
+                  <div class="content-order-table">
+                    <div class="content-selection-type">
+                      <span>Lọc đơn hàng theo: </span>
+                      <select class="select_order_type_value" id="">
+                        <option value="" >Tất cả đơn hàng</option>
+                        <option value="1" class="select_type_1">Đang chờ duyệt</option>
+                        <option value="2" class="select_type_2">Đơn hàng đang giao</option>
+                        <option value="3" class="select_type_3">Đơn hàng đã nhận</option>
+                        <option value="4" class="select_type_4">Đơn hàng đã hủy</option>
+                      </select> <p class="select-filter select_type_all_btn">Tìm kiếm</p>
+                    </div>
+                    <table>
+                      <thead class="table_history_header">
+                        <tr>
+                          <th class="table_history-STT">STT</th>
+                          <th class="table_history-code">Mã đơn hàng</th>
+                          <th class="table_history-name">Mã khách hàng</th>
+                          <th class="table_history-details">Chi tiết đơn hàng</th>
+                          <th class="table_history-address">Địa chỉ</th>
+                          <th class="table_history-date">Trạng thái</th>
+                          <th class="table_history-date">Ngày nhận</th>             
+                        </tr>
+                      </thead>   
+                      <tbody class="table_history-member_all"></tbody>
+                    </table>
+                  </div>
+                  <div class="handle_product">
+                      <%- include('handle_product.ejs') %> 
+                  </div> 
+                  <div class="handle_update-product">
+                    <%- include('update_product.ejs') %> 
+                </div>           
+             </div>
+      </div>
+    </div>
+    <!-- <script src="/js/admin.js"></script> -->
+    <script src="/js/admin_new.js"></script>
+  </body>
+</html>

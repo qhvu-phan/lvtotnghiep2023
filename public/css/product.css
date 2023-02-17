@@ -1,0 +1,101 @@
+.content-product-container {
+  width: 980px;
+  max-height: 1200px;
+}
+.content-product-main {
+  width: 980px;
+  margin-top: 10px;
+  max-width: 10000px;
+  background-color: #fff;
+}
+.content-product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.content-product-item {
+  width: 244px;
+  max-height: 300px;
+  text-align: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+  border: 1px solid #eee;
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.buy button {
+  font-size: 17px;
+  border: 1px solid #037841;
+  border-radius: 4px;
+  padding: 10px 40px;
+  color: #037841;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  font-weight: 600;
+}
+.buy {
+  margin-top: 0px;
+  transition: all 0.5s;
+}
+.content-product-item:hover .buy {
+  display: block;
+  margin-top: -140px;
+  z-index: 20;
+}
+.content-product-item:hover {
+  background-color: #eee;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.buy:hover button {
+  background-color: #037841;
+  color: #fff;
+}
+.price-buy,
+.title-content {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 20px 5px;
+}
+.content-product-title {
+  text-transform: uppercase;
+  border-left: 5px solid #037841;
+  padding-left: 10px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #4a4a4a;
+  background-color: #eee;
+}
+.title-content-hot {
+  margin-left: 5px;
+  width: 180px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.price-buy-hot {
+  width: 200px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.bg-content-item {
+  background-image: url("/img/bgpin.jpg");
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content-product-extend {
+  height: 30px;
+  text-align: center;
+  color: #0064c2;
+  font-size: 14px;
+}

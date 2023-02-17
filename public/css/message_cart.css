@@ -1,0 +1,47 @@
+.meesage-cart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #aaaaaa;
+  opacity: 0.9;
+}
+
+.message_cart-container {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 120px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 10;
+  margin: 250px auto;
+}
+.message_cart-content {
+  width: 380px;
+  margin: 0 10px;
+  padding: 10px 0;
+  height: 50px;
+  font-size: 14px;
+}
+.message_cart-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.message_cart-btn a {
+  margin-top: 40px;
+  padding: 10px 60px;
+  width: 180px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #eee;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.message_cart-btn-yes a {
+  background-color: #057541;
+  color: #fff;
+}

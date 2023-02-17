@@ -1,0 +1,68 @@
+.details-order-container {
+  position: relative;
+  top: 20px;
+  left: 0px;
+  width: 800px;
+  background-color: #fff;
+  display: none;
+}
+.details-order-back_order {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #eee;
+  color: #057541;
+  cursor: pointer;
+}
+.details-order-date_status {
+  font-size: 14px;
+  margin-left: 20px;
+}
+.details-order-title {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+.details-order-table {
+  width: 700px;
+  margin: 20px auto;
+  max-height: 450px;
+  overflow: auto;
+}
+.details-order-image {
+  font-size: 14px;
+  width: 100px;
+}
+.details-order-name {
+  font-size: 14px;
+  width: 200px;
+}
+.details-order-quantity {
+  font-size: 14px;
+  width: 100px;
+}
+.details-order-money {
+  font-size: 14px;
+  width: 150px;
+}
+.details-order-total {
+  font-size: 14px;
+  width: 150px;
+}
+.order-details-total_money {
+  width: 700px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: right;
+}
+.order-details-hotline {
+  font-size: 14px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+}
+.order-details-hotline span {
+  color: #475993;
+}

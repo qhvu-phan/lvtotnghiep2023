@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/order.css">
+<div class="order-details-container">
+    <div class="order-details-title">
+        <div class="order-details-title_hello">
+            Xin chào <b class="order-customer-id" data-id="<%- id %>"></b> 
+        </div>
+        <div class="order-details-title_logout">
+            <a id="order_details-logout_btn" href="#">Đăng xuất tài khoản</a>
+        </div>
+    </div>
+    <div class="order-details-table_title">
+        Lịch sử mua hàng
+    </div>
+    <div class="order-details-table_history">
+        <table>
+          <thead>
+            <tr>
+              <th class="table_history-STT">STT</th>
+              <th class="table_history-code">Mã đơn hàng</th>
+              <th class="table_history-name">Người nhận</th>
+              <th class="table_history-details">Chi tiết đơn hàng</th>
+              <th class="table_history-address">Địa chỉ</th>
+              <th class="table_history-date">Trạng thái</th>
+              <th class="table_history-date">Ngày đặt</th>             
+            </tr>
+          </thead>
+            <tbody class="order-render-member"></tbody>
+          </table>
+    </div>
+</div>
+<script src="/js/order.js"></script>

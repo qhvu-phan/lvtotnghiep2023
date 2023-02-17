@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/font/fontawesome-free-5.15.4-web/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/suggestion.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <title>Justin Store</title>
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+            <%- include('topbar.ejs') %>
+        </div>
+        <div class="content">
+           <div class="content-suggestion-container">
+               <div class="content-suggestion-infomation">
+                    <div class="suggestion-money">
+                        <input id="suggestion-input"class="suggestion-input" placeholder="Nhập số tiền cần mua" type="text" >
+                    </div>  
+                    <div class="suggestion-type_product">
+                         <select id="suggestion-selection" class="suggestion-selection">
+                             <option value="0">Vui lòng chọn loại sản phẩm</option>
+                             <option value="1">Rau xanh các loại</option>
+                             <option value="2">Củ quả các loại</option>
+                             <option value="3">Thịt các loại</option>
+                             <option value="5">Cá các loại</option>
+                             <option value="4">Mì các loại</option>
+                         </select>
+                    </div>
+                    <div class="suggestion-btn">
+                        <button class="suggestion-btn-action">Mua</button>
+                    </div>
+               </div>
+               <div class="content-suggestion-product">
+                    <div class="suggestion-list-product">
+                        <div class="suggestion-product-null">
+                                <div class="product-null">
+                                    <img src="/img/cartnull_suggestion.png" alt="">
+                                    <p>Xe hàng của bạn đang trống!</p>                 
+                                </div>
+                        </div>
+
+                    </div>
+                    <div class="suggestion-product-total">
+                        <div class="suggestion-total-product suggestion-total">
+                            <span>Sản phẩm mua được:</span> 
+                            <label for="">0</label>
+                        </div>
+                        <div class="suggestion-total-money  suggestion-total">
+                            <span>Tiền còn thừa:</span> 
+                            <label for="">0<u> đ</u></label>
+                        </div>
+                        <!-- <div class="suggestion-total-button">
+                            <button>Thêm vào giỏ</button>
+                        </div>                      -->
+                    </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <script src="/js/suggestion.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/product.js"></script>
+</body>
+</html>

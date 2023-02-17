@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/font/fontawesome-free-5.15.4-web/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>Justin Store</title>
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+            <%- include('topbar.ejs') %>
+        </div>
+        <div class="content">
+            <div class="content-cart-container">
+                <div class="cart-title">
+                      <p class="cart-customer-id" data-id="<%- visible_id %>">Giỏ hàng của bạn</p> 
+                </div>
+                <div class="background-html-action"></div>
+                <div class="cart-list">
+                    <% if(0 < data.cart.length){ %>
+                        <% for (let i = 0; i < data.cart.length ;i++) { %>
+                    <div class="cart-item cart-item-<%=data.cart[i].visible_id_pro%>">
+                       <div class="cart-item-img">
+                           <img src="/img/<%=data.cart[i].image_path.slice(10)%>" width="60px" height="60px" alt="">
+                       </div>
+                       <div class="cart-item-content">
+                           <div class="cart-item-title">
+                            <a href="#"><%=data.cart[i].pro_name%></a>
+                           </div>
+                           <div class="cart-item-quanity">
+                               <div class="item-quanity">
+                                <i class="fas fa-minus" data-id="<%=data.cart[i].visible_id_pro%>"></i>
+                                <input type="text" value ="<%=data.cart[i].pro_quantity%>"class="quanity-input" >
+                                <i class="fas fa-plus" data-id="<%=data.cart[i].visible_id_pro%>"></i>
+                               </div>
+                               <div class="item-delete" data-id="<%=data.cart[i].visible_id_pro%>">
+                                   Xóa
+                               </div>
+                           </div>
+                           <div class="tooltip-price">
+                            <p><%=data.cart[i].pro_price%><u>đ</u> / SL 1</p> 
+                        </div>
+                       </div>
+                       <div class="cart-item-total">
+                        <%=data.cart[i].pro_price * data.cart[i].pro_quantity%>
+                       </div>
+                      
+                    </div> 
+                    <% } %>
+                <% } else { %>
+                    <div></div>
+                <% } %>
+                     
+                </div>
+                <div class="cart-sale">
+                   Thời gian giao hàng có thể thay đổi vì dịch bệnh covid-19!
+                </div>
+                <div class="cart-amount">
+                    <div class="total">
+                        <span>Tổng tiền: </span>
+                        <label class="cart-total-all_product" for="">0<u>đ</u></label>
+                    </div>
+                    <div class="discount">
+                        <span>Phí giao dự kiến: </span>
+                        <label class="cart-ship-money" for="">0<u>đ</u></label>
+                    </div>
+                    <div class="total">
+                        <span>Tổng tiền thanh toán: </span>
+                        <label class="cart-total-money" for="">0<u>đ</u></label>
+                    </div>
+                </div>
+                <div class="cart-buy-btn cart-btn">
+                    <a href="#" class="cart-buy-action">Đặt hàng</a>
+                </div>
+                <div class="cart-cancle-btn cart-btn">
+                    <a class="cart-cancle-btn-action"href="#">Xóa giỏ hàng</a>
+                </div>
+            </div>
+            <div class="content-customer-container" >
+                <div class="customer-back_cart">
+                    <p class="customer-back-cart"> < Quay lại giỏ hàng</p>
+                </div>
+                <div class="customer-address_old">
+                    >> Lấy địa chỉ mua hàng trước đó
+                </div>
+                <div class="customer-info">
+                    <div class="customer-info-title customer-info-member">
+                        1.Thông tin người mua hàng
+                    </div>
+                  
+                    <div class="customer-info-input">
+                        <div class="customer-info-input_name info-input-style">
+                            <!-- <label for="">Họ và tên</label> -->
+                            <input id="customer-name" class="info-input-style_input"type="text" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="customer-info-input_phone info-input-style">
+                            <!-- <label for="">Số điện thoại</label> -->
+                            <input id="customer-phone" class="info-input-style_input" type="text" placeholder="Số điện thoại" required>
+                        </div>
+                        <div class="customer-info-input_email info-input-style">
+                            <!-- <label for="">Email</label> -->
+                            <input id="customer-email" class="info-input-style_input" type="text" placeholder="Email" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="customer-address">
+                     <div class="customer-address-title">
+                         2.Địa chỉ nhận hàng
+                     </div>
+                     <div class="customer-address-selection">
+                         <textarea id="customer-address" name="" class="customer-address-textarea" cols="63" rows="6"></textarea>
+                     </div>
+                </div>
+                <div class="customer-time_receive">
+                    <div class="customer-time_title">
+                        3.Hình thức thanh toán
+                    </div>
+                     <div class="customer-time_note-container">
+                        <div class="customer-time_note">
+                            <input type="radio" name="cash"/>
+                            <div class="cash-button cash-online">Thanh toán trực tuyến</div>
+                        </div>
+                        <div class="customer-time_note">
+                            <input type="radio" name="cash"/>
+                            <div class="cash-button cash-delivery">Thanh toán khi nhận hàng</div>
+                        </div>
+                     </div>
+                     <div class="customer-time-price">
+                         <div class="customer-price_product customer-time-genarate">
+                            <span>Tiền hàng:</span><label class="customer-total-all_product">0<u>đ</u></label>
+                         </div>
+                         <div class="customer-price_ship customer-time-genarate">
+                            <span>Phí giao hàng dự kiến:</span><label class="customer-ship-money">0<u>đ</u></label>
+                        </div>
+                        <div class="customer-price_total customer-time-genarate">
+                            <span>Tổng tiền:</span><label class="customer-total-money">0<u>đ</u></label>
+                        </div>
+                        <div class="customer-price-submit">
+                            <button class="customer-price-submit_btn">XÁC NHẬN ĐƠN HÀNG</button>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-message message-hide">
+            <%- include('message.ejs') %>
+        </div>
+    </div>
+    <div class="meesage-cart-container  message-hide">
+        <%- include('message_cart.ejs') %>
+    </div>
+    <div class="background-loading">
+        <%- include('loading.ejs') %> 
+    </div>
+    <script src="/js/cart.js"></script>
+    <script src="/js/product.js"></script>
+</body>
+</html>

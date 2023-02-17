@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/font/fontawesome-free-5.15.4-web/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/fruit.css">
+    <title>Justin Store</title>
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+            <%- include('topbar.ejs') %>
+        </div>
+        <div class="content">
+            <div class="content-product">
+                <div class="content-product-container">
+                    <div class="content-product-main">
+                        <div class="content-product-title">CỦ, QUẢ CÁC LOẠI</div>
+                        <div class="content-product-list">
+                            <!-- <div class="content-product-item">
+                                <div class="bg-content-item">
+                                    <div class="title-content-hot">Nước xã vãi comfort em be cho da nhạy cảm 3.2l</div>
+                                    <div class="price-buy-hot">
+                                           <span>15.000 đ</span>
+                                    </div>
+                                    <div> <img src="/img/comfor.png" alt="" width="200px" height="205px"></div>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">CHỌN MUA</a>
+                                </div>    
+                             </div> -->
+                             <%if(data){%>
+                                <% for(let i = 0;i < data.fruit.length;i++) {%>
+                                    <div class="content-product-item" >
+                                        <div> <img src="/img/<%=data.fruit[i].image_path.slice(10)%>" alt="" width="245px" height="200px"></div>
+                                             <div class="title-content"><%=data.fruit[i].pro_name%></div>
+                                                 <div class="price-buy">
+                                                       <span>SL:<%=data.fruit[i].pro_quantity%></span>
+                                                        <span><%=data.fruit[i].pro_price%><u>đ</u></span>
+                                                   </div><br>
+                                                   <div class="buy">
+                                                        <button class="product-item-selection" data-id="<%=data.fruit[i].visible_id%>">CHỌN MUA</button>
+                                                   </div>
+                                     </div>
+                                <%}%>
+                            <%}%>
+                           
+                        </div>     
+                        <div class="content-product-extend">
+                            <span>Xem thêm 1.321 sản phẩm</span>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/js/product.js"></script>

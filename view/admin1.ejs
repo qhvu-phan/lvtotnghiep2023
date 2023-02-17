@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/font/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <title>Manager</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="header">
+        <div id="info">
+           <a id="login" href="#">Xin chào <%- username %>  </a>
+        </div>
+        <div id="website_search_buy">
+          <div id="website">Vmazon</div>
+          <div id="search">
+            <input class="search" type="text" />
+            <i class="fas fa-search btn-search"></i>
+          </div>
+          <div id="cart">
+            <a class="logout-btn" href="#">Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+      <div id="container">
+        <div id="navigation">
+          <ul id="nav_list">
+            <p class="nav-mem-header">Quản lí</p>
+            <li class="nav-mem admin-manager-order_new">Đơn hàng mới <span class="index_new_order">0</span></li>
+            <li class="nav-mem admin-manager-order">Quản lí đơn hàng</li>
+            <li class="nav-mem admin-manager-product">Quản lí sản phẩm</li>
+            <li class="nav-mem">
+              <a id="nav-header-add" href="#">Thêm sản phẩm</a>
+              <div id="addproduct" class="addproduct">
+                <div id="register-form">
+                  <p class="notification_mem-header">Thông tin sản phẩm</p>
+                  <br />
+                  <label>Tên sản phẩm:</label><br />
+                  <input  type="text" name="pro_name" /><br /><br />
+                  <label>Loại sản phẩm</label><br />
+                  <select  class="pro_types">
+                    <option value="">Chọn loại sản phẩm</option>
+                    <option value="1">Rau xanh các loại</option>
+                    <option value="2">Củ, quả các loại</option>
+                    <option value="3">Thịt các loại</option>
+                    <option value="4">Mì các loại</option>
+                    <option value="5">Cá các loại</option>
+                  </select><br> <br>
+                  <!-- <input  type="text" name="pro_type" /><br /><br /> -->
+                  <lable>Giá trị dinh dưỡng</lable><br />
+                  <input
+                    
+                    type="text"
+                    name="pro_description"
+                  /><br /><br />
+                  <label>Hình ảnh:</label><br />
+                  <input
+                    type="file"
+                    placeholder=""
+                    name="image_file"
+                  /><br /><br />
+                  <label>Giá sản phẩm</label><br />
+                  <input  type="text" name="pro_price" /><br /><br />
+                  <button id="create" onclick="handleCrateProduct()">Thêm sản phẩm</button>
+                  <button id="close">Đóng</button>
+                </div>
+              </div>
+              <div id="editproduct" class="addproduct">
+                <div id="register-form">
+                  <p class="notification_mem-header">Thông tin sản phẩm</p>
+                  <br />
+                  <label>Tên sản phẩm:</label><br />
+                  <input  type="text" name="pro_names" /><br /><br />
+                  <label>Loại sản phẩm</label><br />
+                  <select name="pro_types">
+                    <option value="">Chọn loại sản phẩm</option>
+                    <option value="1">Rau xanh các loại</option>
+                    <option value="2">Củ, quả các loại</option>
+                    <option value="3">Thịt các loại</option>
+                    <option value="4">Mì các loại</option>
+                    <option value="5">Cá các loại</option>
+                  </select><br> <br>
+                  <!-- <input  type="text" name="pro_types" /><br /><br /> -->
+                  <lable>Giá trị dinh dưỡng</lable><br />
+                  <input
+                    
+                    type="text"
+                    name="pro_descriptions"
+                  /><br /><br />
+                  <label>Hình ảnh:</label><br />
+                  <input
+                    type="file"
+                    placeholder=""
+                    name="image_files"
+                  /><br /><br />
+                  <label>Giá sản phẩm</label><br />
+                  <input  type="text" name="pro_prices" /><br /><br />
+                  <button id="updates">Cập nhật</button>
+                  <button id="closes">Đóng</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="content">
+          <div class="content"></div>        
+          <div class="content-order-table">
+            <div class="content-selection-type">
+              <span>Lọc đơn hàng theo: </span>
+              <select class="select_order_type_value" id="">
+                <option value="" >Tất cả đơn hàng</option>
+                <option value="1" class="select_type_1">Đang chờ duyệt</option>
+                <option value="2" class="select_type_2">Đơn hàng đang giao</option>
+                <option value="3" class="select_type_3">Đơn hàng đã nhận</option>
+                <option value="4" class="select_type_4">Đơn hàng đã hủy</option>
+              </select> <p class="select-filter select_type_all_btn">Tìm kiếm</p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th class="table_history-STT">STT</th>
+                  <th class="table_history-code">Mã đơn hàng</th>
+                  <th class="table_history-name">Mã khách hàng</th>
+                  <th class="table_history-details">Chi tiết đơn hàng</th>
+                  <th class="table_history-address">Địa chỉ</th>
+                  <th class="table_history-date">Trạng thái</th>
+                  <th class="table_history-date">Ngày nhận</th>             
+                </tr>
+              </thead>   
+              <tbody class="table_history-member_all"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer-info">
+          <div class="title-footer">Vmazon</div>
+          <p>Chất lượng làm nên thương hiệu</p>
+          <p>Hân hạnh được phục vụ</p>
+        </div>
+        <div class="footer-address">
+          <p class="address-footer">Địa chỉ: nhà trên đất</p>
+          <p>Thích thì mua không thích thì mua</p>
+          <p>Liên hệ thì liên hệ không liên hệ thì liên hệ</p>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="/js/admin.js"></script>
+    <script src="/js/admin_new.js"></script> -->
+  </body>
+</html>

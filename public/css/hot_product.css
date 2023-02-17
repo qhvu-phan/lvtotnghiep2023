@@ -1,0 +1,27 @@
+.hot-product-main {
+  background-color: #fff;
+  width: 980px;
+}
+.hot-product-title {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.hot-product-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.prouduct-content {
+  color: #288ad6;
+}
+.hot-product-item {
+  float: left;
+  width: 50px;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: center;
+}

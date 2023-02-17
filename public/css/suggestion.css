@@ -1,0 +1,153 @@
+.content-suggestion-container {
+  position: relative;
+  top: 30px;
+  left: -220px;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  height: 660px;
+  max-height: 10000px;
+  background-color: #fff;
+}
+.category {
+  display: none;
+}
+.content-suggestion-infomation {
+  flex: 1;
+}
+.content-suggestion-product {
+  width: 900px;
+}
+.suggestion-input {
+  margin: 50px 10px 0 10px;
+  width: 280px;
+  height: 26px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.suggestion-selection {
+  width: 280px;
+  height: 26px;
+  margin: 20px 10px 0 10px;
+  font-size: 14px;
+}
+.suggestion-btn {
+  width: 280px;
+  height: 26px;
+  margin: 20px 10px 0 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.suggestion-btn button {
+  padding: 10px 100px;
+  background-color: #057541;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 800;
+  border: none;
+  text-transform: uppercase;
+}
+.suggestion-btn button:hover {
+  background-color: #fff;
+  color: #057541;
+  border: 1px solid #057541;
+}
+.suggestion-list-product {
+  height: 520px;
+  width: 900px;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: auto;
+}
+.suggestion-product-total {
+  height: 80px;
+  border-top: 1px solid #057541;
+  padding: 10px 0;
+  font-weight: 600;
+}
+.suggestion-total {
+  width: 250px;
+  font-size: 14px;
+}
+
+.suggestion-total label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+.suggestion-total-product {
+  text-align: right;
+}
+.suggestion-total-money {
+  text-align: right;
+  margin-top: 10px;
+}
+.suggestion-total-button {
+  height: 50px;
+  text-align: center;
+}
+.suggestion-total-button button {
+  padding: 10px 100px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-weight: 800;
+  background-color: #057541;
+  border: none;
+}
+.suggestion-total-button button:hover {
+  background-color: #fff;
+  color: #057541;
+  border: 1px solid #057541;
+}
+.suggestion-product-null {
+  width: 260px;
+  margin: 80px auto;
+}
+.product-null p {
+  font-size: 20px;
+  text-align: center;
+  color: #057541;
+}
+.suggestion-total-money label {
+  color: #057541;
+}
+.price-buy {
+  font-size: 16px;
+}
+.info-nutritional {
+  font-size: 16px;
+}
+.content-product-item {
+  height: 600px;
+}
+.container {
+  background-color: #057541 !important;
+  color: #fff !important;
+}
+.container:hover {
+  background-color: #fff !important;
+  color: #656565 !important;
+}
+.container:hover .category {
+  display: block !important;
+}
+.container:hover .background-html {
+  display: block;
+}
+.background-html:hover {
+  display: none !important;
+}

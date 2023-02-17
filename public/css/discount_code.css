@@ -1,0 +1,59 @@
+.discount-code {
+  width: 980px;
+  background-color: #fff;
+  max-height: 300px;
+}
+.discount-code-title {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.discount-code-main {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.discount-code-item {
+  overflow: hidden;
+  border: 1px solid #037841;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-left: 5px;
+  padding-right: 7px;
+  cursor: pointer;
+  margin-left: 6px;
+  margin-right: 6px;
+  background: #fff;
+  display: inline-block;
+  width: 240px;
+  position: relative;
+  color: #000;
+  height: 64px;
+  box-sizing: border-box;
+}
+.discount-content {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+  white-space: normal;
+  color: #222b45;
+  padding-top: 4px;
+}
+.discount-title-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.check-icon {
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #037841;
+  padding-top: 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+}

@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "local-storage": "^2.0.0",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.7.0",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "randomstring": "^1.2.1",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "name": "project_nlcs",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init_database": "node ./models/src/config/init_database.js",
+    "init_table": "npx sequelize-cli db:migrate",
+    "init_data": "npx sequelize-cli db:seed:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
+}

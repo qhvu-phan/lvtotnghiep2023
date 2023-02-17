@@ -1,0 +1,73 @@
+.order-details-container {
+  position: relative;
+  top: 30px;
+  left: -215px;
+  width: 1195px;
+  background-color: #fff;
+}
+.order-details-table_history {
+  width: 1100px;
+  margin: auto;
+  margin-top: 10px;
+  max-height: 600px;
+  overflow: auto;
+}
+.order-details-title {
+  position: relative;
+  top: 10px;
+  margin: auto;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.order-details-title_logout a {
+  color: dodgerblue;
+}
+
+.history-details {
+  color: dodgerblue;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+.order-details-table_title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.table_history-STT {
+  width: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+.table_history-code {
+  width: 100px;
+  font-size: 14px;
+}
+.table_history-name {
+  width: 150px;
+  font-size: 14px;
+}
+.table_history-details {
+  width: 150px;
+  font-size: 14px;
+}
+.table_history-address {
+  width: 300px;
+  font-size: 14px;
+}
+.table_history-date {
+  width: 180px;
+  font-size: 14px;
+}
+.table_history-member td {
+  text-align: center;
+  font-size: 14px;
+}
+.order-render-member {
+  color: #333333;
+  max-height: 300px !important;
+  overflow: auto;
+}

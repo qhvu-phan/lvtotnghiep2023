@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/topbar.css">
+<link rel="stylesheet" href="/css/search_product.css">
+<div id="topbar" class="topbar">
+    <div class="topbar-header">
+        <div class="topbar-list">
+            <%- include('navagation.ejs') %>
+        </div>        
+            <div class="topbar-home">
+               <a href="http://localhost:5000/"> <img src="/img/logo-bxh.png" height="50px" width="160px" alt="logo"></a>
+            </div>
+            <div class="topbar-search">
+                <input type="text" class="topbar-search-input" onfocus="this.value=''" placeholder="Tìm kiếm hơn 10k sản phẩm">
+                <i class="fas fa-microphone-alt topbar-search-btn"></i>
+                <!-- <i class="fas fa-search "></i> -->
+            </div>
+            <div class="topbar-suggestion">
+                <div id="topbar-suggestion-content">
+                    <i class="fas fa-baby-carriage"></i>
+                   <a href="http://localhost:5000/suggestion">Gợi ý mua hàng</a>
+                </div>
+            </div>
+            <div class="topbar-bill"><a href="http://localhost:5000/login_user">Đơn hàng <br> của bạn</a></div>
+            <div class="topbar-cart">
+                <div class="cart-icon-show" style="display: none">
+                    <i class="fas fa-shopping-basket"></i>
+                    <div class="topbar-cart-number">1</div>
+                </div>     
+                <div class="cart-content-show"  style="display: none">
+                    <a class="topbar-cart-cart" href="http://localhost:5000/cart"><b>THANH TOÁN</b></a> <br>
+                    <p class="topbar-cart-price">248.000</p> 
+                </div>
+                <div class="topbar-cart-icon" >
+                    <i class="fas fa-shopping-basket"></i>
+                </div>     
+                <div class="topbar-cart-content">
+                    <a  href="http://localhost:5000/cart"><b>GIỎ HÀNG</b></a> <br>
+                </div>
+            </div>
+    </div>  
+</div>
+<div class="topbar-search_product_item">
+    <%- include('search_product.ejs') %>
+</div>
+<script src="/js/search_product.js"></script>
+<script src="/js/voice_search.js"></script>
