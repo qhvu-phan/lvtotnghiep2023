@@ -31,6 +31,28 @@
                 <%- include('product.ejs') %>
             </div>        
         </div>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    customData: { language: "vi" }, // arbitrary custom data. Stay minimal as this will be added to the socket
+                    initPayload: "/get_started",
+                    socketUrl: "http://localhost:5005",
+                    socketPath: "/socket.io/",
+                    title: "Chatbot"
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
     </div>
 </body>
 </html>

@@ -1,0 +1,106 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào
+    - hello
+    - hi
+    - xin chào
+    - chào buổi sáng
+    - chào buổi tối
+    - chào bạn
+    - chào buổi chiều
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - hẹn gặp lại
+    - chúc ngủ ngon
+    - bye
+    - goodbye
+    - bye bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - có
+    - vâng
+    - dạ
+    - đúng
+    - thực sự
+    - chính xác
+    - nghe hay đó
+    - dĩ nhiên rồi
+
+- intent: deny
+  examples: |
+    - no
+    - không
+    - từ chối
+    - không bao giờ
+    - không hẳn
+    - không đời nào
+    - tôi không nghĩ vậy
+    - không thích như vậy
+
+
+- intent: mood_great
+  examples: |
+    - hoàn hảo
+    - cảm giác như một vị vua
+    - tôi đang cảm thấy rất tốt
+    - tôi thật tuyệt
+    - tôi tuyệt vời
+    - Tôi sẽ cứu thế giới
+    - siêu hấp dẫn
+    - cực kỳ tốt
+    - quá hoàn hảo
+    - quá tốt
+    - tuyệt vời
+
+- intent: mood_unhappy
+  examples: |
+    - ngày của tôi thật kinh khủng
+    - tôi buồn
+    - tôi cảm thấy không khỏe lắm
+    - tôi thất vọng
+    - siêu buồn
+    - Tôi rất buồn
+    - buồn
+    - rất buồn
+    - không vui
+    - không tốt
+    - không tốt lắm
+    - cực kỳ buồn
+
+- intent: bot_challenge
+  examples: |
+    - bạn có phải robot không?
+    - bạn có phải là con người?
+    - tôi đang nói chuyện với một bot?
+    - Tôi đang nói chuyện với một con người?
+
+- intent: info
+  examples: |
+    - cung cấp thông tin
+
+- intent: tell_name
+  examples: |
+    - cho tôi biết tên ?
+
+- intent: my_name
+  examples: |
+    - tôi tên là [vũ] {"entity": "name", "value": "vũ"}
+    - tôi tên là [khánh] {"entity": "name", "value": "khánh"}
+    - [vũ] {"entity": "name", "value": "vũ"}
+    - [vũ] {"entity": "name", "value": "vũ"} là tên của tôi 
+    - mọi người gọi tôi là [vũ] {"entity": "name", "value": "vũ"}
+
+- intent: mobile_number
+  examples: |
+    - số điện thoại là [0989793085] {"entity": "number"}
+    - [0989793085]  {"entity": "number"}
+    - [0989793085]  {"entity": "number"} là số điện thoại của tôi
+
+

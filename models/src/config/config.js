@@ -6,11 +6,11 @@ module.exports = {
         "database": process.env.DB_NAME,
         "host": process.env.DB_HOST,
         "dialect": "mysql",
-        "dialectOptions": {
-            "ssl": {
-              "required": false,
-            },
-          },
+        // "dialectOptions": {
+        //     "ssl": {
+        //       "required": false,
+        //     },
+        //   },
       },
       "test": {
         "username": process.env.DB_USERNAME_TEST,
