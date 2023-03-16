@@ -8,51 +8,31 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - my_name: 
-    use_entities: 
-      - name
-  - mobile_number:
-    use_entities: 
-      - number
+  - give_time
 
-entities: 
-  - name
-  - number
+actions:
+  - action_show_time
 
 responses:
   utter_greet:
-  - text: "Xin chào! bạn có khỏe không ?"
+  - text: "Hey! Bạn có khỏe không?"
 
   utter_cheer_up:
   - text: "Đây là một cái gì đó để cổ vũ bạn lên:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Điều đó có giúp cho bạn ổn hơn không?"
+  - text: "Điều đó đã giúp bạn?"
 
   utter_happy:
   - text: "Tuyệt, carry on!"
 
   utter_goodbye:
-  - text: "Tạm biệt bạn"
+  - text: "Tạm biệt"
 
   utter_iamabot:
-  - text: "Tôi là một bot, được cung cấp bởi Rasa."
+  - text: "Tôi là một bot, được hỗ trợ bởi Rasa."
 
-  utter_provide_info:
-  - text: "Bạn có muốn cung cấp thông tin cho chúng tôi được không ?"
-
-  utter_name: 
-  - text: "Tôi tên là Voldermort"
-  
-  utter_my_name: 
-  - text: "Tên bạn là gì ?"
-
-  utter_mobile_number: 
-  - text: "Số điện thoại của bạn là số mấy ?"
-
-  utter_thanks: 
-  - text: "Cám ơn vì đã cung cấp thông tin"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

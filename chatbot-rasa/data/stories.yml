@@ -29,20 +29,9 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-
-- story: happy name path
+- story: path about time
   steps:
-  - intent: info
-  - action: utter_provide_info
-  - action: affirm
-  - intent: tell_name
-  - action: utter_name
-  - action: utter_my_name
-  - intent: my_name
-    entities: 
-    - name: "vũ"
-  - action: utter_mobile_number
-  - intent: mobile_number
-    entities: 
-    - number: "0989793085"
-  - action: utter_thanks
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time

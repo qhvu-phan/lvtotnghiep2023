@@ -79,28 +79,14 @@ nlu:
     - bạn có phải robot không?
     - bạn có phải là con người?
     - tôi đang nói chuyện với một bot?
-    - Tôi đang nói chuyện với một con người?
+    - tôi đang nói chuyện với một con người?
 
-- intent: info
+- intent: give_time
   examples: |
-    - cung cấp thông tin
+    - bạn có thể cho tôi biết bây giờ là mầy giờ không ?
+    - cho tôi biết thời gian
+    - bây giờ là mấy giờ
 
-- intent: tell_name
-  examples: |
-    - cho tôi biết tên ?
 
-- intent: my_name
-  examples: |
-    - tôi tên là [vũ] {"entity": "name", "value": "vũ"}
-    - tôi tên là [khánh] {"entity": "name", "value": "khánh"}
-    - [vũ] {"entity": "name", "value": "vũ"}
-    - [vũ] {"entity": "name", "value": "vũ"} là tên của tôi 
-    - mọi người gọi tôi là [vũ] {"entity": "name", "value": "vũ"}
-
-- intent: mobile_number
-  examples: |
-    - số điện thoại là [0989793085] {"entity": "number"}
-    - [0989793085]  {"entity": "number"}
-    - [0989793085]  {"entity": "number"} là số điện thoại của tôi
 
 
