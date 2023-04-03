@@ -18,6 +18,9 @@ body {
 .header {
   margin-top: 35px;
 }
+.content-slide {
+  margin: 50px 0 0 0;
+}
 .content-discount-code {
   margin-top: 110px;
 }
@@ -30,4 +33,7 @@ body {
 .content {
   position: absolute;
   left: 257px;
+}
+.rw-chat-open a {
+  color: cornflowerblue !important;
 }

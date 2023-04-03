@@ -9,6 +9,17 @@ intents:
   - mood_unhappy
   - bot_challenge
   - give_time
+  - girl_friend
+  - view_history
+  - buy_product
+  - register_account
+  - voice_search
+  - who
+  - help_customer
+  - about_meat
+  - about_vegetable
+  - about_noodle
+  - about_fish
 
 actions:
   - action_show_time
@@ -32,6 +43,41 @@ responses:
 
   utter_iamabot:
   - text: "Tôi là một bot, được hỗ trợ bởi Rasa."
+
+  utter_girl_friend:
+  - text: "Muốn biết trap boy là gì thì liên hệ VuPQH nha hihi"
+  - text: "KhanhTG là ông trùm trap boy đó, hãy liên hệ với cậu ấy hihi"
+
+  utter_view_history:
+  - text: "Bạn chọn vào Đơn hàng của bạn sau đó Đăng nhập bằng tài khoản của bạn để xem lịch sử mua hàng của bạn! Bạn cần tôi trợ giúp gì thêm không?"
+
+  utter_buy_product:
+  - text: "Để mua được sản phẩm bạn vui lòng đăng nhập trước nhé. Chọn vào Đơn hàng của bạn sau đó Đăng nhập bằng tài khoản của bạn để bắt đầu mua sản phẩm. Bạn cần tôi trợ giúp gì thêm không?"
+
+  utter_register_account:
+  - text: "Bạn chọn vào Đơn hàng của bạn sau đó chọn Chưa có tài khoản -> Nhập đầy đủ thông tin và chọn Đăng ký. Bạn cần tôi trợ giúp gì thêm không?"
+
+  utter_voice_search:
+  - text: "Bạn chọn vào biểu tường Micro trên thanh tìm kiếm để ghi nhận giọng nói và bấm vào biểu tượng Micro lần nữa để dừng ghi nhận giọng nói. Bạn cần tôi trợ giúp gì thêm không?"
+
+  utter_who:
+  - text: "Tôi tên là Chàng Sen. Rất vui khi được trò truyện cùng bạn! Bạn cần tôi giúp gì không nào?"
+
+  utter_help_customer:
+  - text: "Dĩ nhiên rồi, bạn cần tôi giúp gì nào?"
+  - text: "Rất vui khi được giúp đở bạn, hãy cho tôi biết vấn đế của bạn nào?"
+
+  utter_about_meat:
+  - text: "Cửa hàng có bán rất nhiều loại thịt khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/meat. Bạn cần tôi giúp gì không nào?"
+
+  utter_about_vegetable:
+  - text: "Cửa hàng có bán rất nhiều loại rau khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/vegetable. Bạn cần tôi giúp gì không nào?"
+
+  utter_about_noodle:
+  - text: "Cửa hàng có bán rất nhiều loại mì khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/noodles. Bạn cần tôi giúp gì không nào?"
+
+  utter_about_fish:
+  - text: "Cửa hàng có bán rất nhiều loại mì khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/fish. Bạn cần tôi giúp gì không nào?"
 
 session_config:
   session_expiration_time: 60

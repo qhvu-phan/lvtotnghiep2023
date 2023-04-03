@@ -3,6 +3,7 @@ var cartsApi = "http://localhost:5000/cart";
 let search_value = document.querySelector(".topbar-search-input");
 const search_container = document.querySelector(".topbar-search_product_item");
 let listProducts = [];
+
 function handleEventOninput() {
   search_value.addEventListener("input", () => {
     if (search_value.value !== "") {
@@ -36,10 +37,13 @@ function getProductCart() {
     });
 }
 function searchProduct(value) {
-  const regex = new RegExp(`${value.toLowerCase()}`);
+  const convertValue = value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+  const regex = new RegExp(`${convertValue.toLowerCase()}`);
   var listProduct = document.querySelector(".search-product-list");
   var html = listProducts.map((product) => {
-    if (regex.test(product.pro_name.toLowerCase())) {
+    if (regex.test(product.pro_name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) || 
+        regex.test(product.pro_description.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) ||
+        regex.test(product.pro_price.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase())) {
       return `
         <div class="search-prouduct-item">
              <div class="product-item-img">
@@ -94,6 +98,7 @@ class SpeechRecognitionApi{
       const SpeechToText = window.speechRecognition || window.webkitSpeechRecognition;
       this.speechApi = new SpeechToText();
       this.speechApi.continuous = true;
+      this.speechApi.lang = 'vi-VN';
       this.speechApi.interimResults = false;
       this.output = options.output ? options.output : document.createElement('div');
       console.log(this.output)
@@ -101,14 +106,9 @@ class SpeechRecognitionApi{
           console.log(event);
           var resultIndex = event.resultIndex;
           var transcript = event.results[resultIndex][0].transcript;
-
-          console.log('transcript>>', transcript);
-          console.log(this.output)
           searchProduct(transcript);   
           search_container.style.display = "block";
           this.output.value = transcript;
-          
-             
       }
   }
   init(){

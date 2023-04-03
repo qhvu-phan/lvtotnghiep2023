@@ -35,3 +35,91 @@ stories:
   - action: utter_greet
   - intent: give_time
   - action: action_show_time
+
+- story: path about girl friend
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: girl_friend
+  - action: utter_girl_friend
+
+- story: path about buy product
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_product
+  - action: utter_buy_product
+
+- story: path about view history order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: view_history
+  - action: utter_view_history
+
+- story: path about register account
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_customer
+  - action: utter_help_customer
+  - intent: register_account
+  - action: utter_register_account
+
+- story: path about voice search
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_customer
+  - action: utter_help_customer
+  - intent: voice_search
+  - action: utter_voice_search
+
+- story: path about who are you
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: who
+  - action: utter_who
+  - intent: help_customer
+  - action: utter_help_customer
+
+- story: path about register account 1
+  steps:
+  - intent: register_account
+  - action: utter_register_account
+
+- story: path about voice search 1
+  steps:
+  - intent: voice_search
+  - action: utter_voice_search
+
+- story: path about view history order 1
+  steps:
+  - intent: view_history
+  - action: utter_view_history
+
+- story: path about buy product 1
+  steps:
+  - intent: buy_product
+  - action: utter_buy_product
+
+- story: path about vegetbale
+  steps:
+  - intent: about_vegetable
+  - action: utter_about_vegetable
+
+- story: path about meat
+  steps:
+  - intent: about_meat
+  - action: utter_about_meat
+
+- story: path about noodel
+  steps:
+  - intent: about_noodle
+  - action: utter_about_noodle
+
+- story: path about fish
+  steps:
+  - intent: about_fish
+  - action: utter_about_fish

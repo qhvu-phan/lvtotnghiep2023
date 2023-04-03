@@ -58,6 +58,6 @@
   position: absolute;
   left: 34%;
   top: 0px;
-  z-index: 20;
+  z-index: 150;
   display: none;
 }
