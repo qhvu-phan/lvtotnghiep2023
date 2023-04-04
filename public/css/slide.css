@@ -60,11 +60,11 @@ body {
 }
 .slider-next {
   right: 25px;
-  top: 100px;
+  top: 150px;
 }
 .slider-prev {
   left: 25px;
-  top: 100px;
+  top: 150px;
 }
 .slider-dots {
   position: absolute;

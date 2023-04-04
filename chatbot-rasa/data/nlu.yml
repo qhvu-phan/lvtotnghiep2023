@@ -86,6 +86,96 @@ nlu:
     - bạn có thể cho tôi biết bây giờ là mầy giờ không ?
     - cho tôi biết thời gian
     - bây giờ là mấy giờ
+    
+- intent: girl_friend
+  examples: |
+    - bạn có thể cho tôi biết cách tán gái không?
+    - trap boy là gì?
+    - những điều kiện để trở thành trap boy
+
+- intent: view_history
+  examples: |
+    - cách xem lịch sử mua hàng
+    - làm thế nào để xem lịch sử mua hàng
+    - lịch sử mua hàng của tôi
+    - lịch sử mua hàng xem ở đâu
+
+- intent: buy_product
+  examples: |
+    - mua hàng bằng cách nào
+    - tôi không thể mua hàng
+    - không mua được sản phẩm
+    - không thể mua sản phẩm
+    - không thể mua
+
+- intent: register_account
+  examples: |
+    - tôi không thể đăng ký được tài khoản
+    - cách đăng ký tài khoản
+    - đăng ký tài khoản
+    - làm thế nào để đăng ký tài khoản
+    - hướng dẫn tôi đăng ký tài khoản
+    - tôi không có tài khoản
+
+- intent: voice_search
+  examples: |
+    - tôi không thể tìm kiếm bằng giọng nói
+    - cách tìm kiếm sản phẩm bằng giọng nói
+    - làm thế nào để tìm kiếm sản phẩm bằng giọng nói
+    - tìm kiếm bằng giọng nói
+
+- intent: who
+  examples: |
+    - bạn là ai?
+    - bạn tên gì?
+    - tôi đang trò truyện cùng ai đây
+    - bạn là robot?
+    - ai đang trợ giúp tôi vậy?
+
+- intent: help_customer
+  examples: |
+    - làm ơn giúp tôi?
+    - tôi cần trợ giúp?
+    - giúp
+    - giúp tôi
+
+- intent: about_meat
+  examples: |
+    - có bán thịt không?
+    - có những loại thịt nào?
+    - tôi cần mua thịt
+    - tôi có thể xem thịt ở đâu?
+    - thịt
+
+- intent: about_vegetable
+  examples: |
+    - có bán rau không?
+    - có những loại rau nào?
+    - tôi cần mua rau
+    - tôi có thể xem rau ở đâu?
+    - rau xanh
+    - rau
+
+- intent: about_noodle
+  examples: |
+    - có bán mì không?
+    - có những loại mì nào?
+    - tôi cần mua mì
+    - tôi có thể xem mì ở đâu?
+    - mì
+
+- intent: about_fish
+  examples: |
+    - có bán cá không?
+    - có những loại cá nào?
+    - tôi cần mua cá
+    - tôi có thể xem cá ở đâu?
+    - cá
+
+
+
+
+
 
 
 

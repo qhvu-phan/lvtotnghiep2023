@@ -1,0 +1,27 @@
+.search_container {
+    position: fixed;
+    width: 980px;
+    z-index: 100;
+}
+.search_title {
+    text-align: right;
+    background-color: #fff;
+    padding: 5px 5px;
+}
+.search_option {
+    margin-top: 5px;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fff;
+    padding: 20px 20px;
+    display: none;
+}
+.search_button {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 3px;
+}
+.close_button {
+    cursor: pointer;
+}
