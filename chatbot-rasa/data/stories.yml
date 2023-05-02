@@ -2,6 +2,9 @@ version: "3.1"
 
 stories:
 
+* greet
+  - utter_greet
+  
 - story: happy path
   steps:
   - intent: greet
@@ -123,3 +126,10 @@ stories:
   steps:
   - intent: about_fish
   - action: utter_about_fish
+
+- story: path about product
+  steps:
+  - intent: about_product
+  - action: utter_about_product
+  - action: action_query_product
+

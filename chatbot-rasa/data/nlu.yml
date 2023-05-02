@@ -172,6 +172,12 @@ nlu:
     - tôi có thể xem cá ở đâu?
     - cá
 
+- intent: about_product
+  examples: |
+    - cho tôi xem danh sách sẳn phẩm ?
+    - trang web có bán những sản phẩm gì ?
+
+
 
 
 

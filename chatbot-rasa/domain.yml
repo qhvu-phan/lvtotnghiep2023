@@ -20,9 +20,12 @@ intents:
   - about_vegetable
   - about_noodle
   - about_fish
+  - about_product
 
 actions:
   - action_show_time
+  - action_query_product
+  - action_greet
 
 responses:
   utter_greet:
@@ -77,7 +80,11 @@ responses:
   - text: "Cửa hàng có bán rất nhiều loại mì khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/noodles. Bạn cần tôi giúp gì không nào?"
 
   utter_about_fish:
-  - text: "Cửa hàng có bán rất nhiều loại mì khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/fish. Bạn cần tôi giúp gì không nào?"
+  - text: "Cửa hàng có bán rất nhiều loại cá khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/fish. Bạn cần tôi giúp gì không nào?"
+
+  utter_about_product:
+  - text: "Bây giờ tôi sẽ hiển thị danh sách sản phẩm:"
+
 
 session_config:
   session_expiration_time: 60

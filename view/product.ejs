@@ -6,7 +6,10 @@
              <%if(data){%>
                 <% for(let i = 0;i < 8;i++) {%>
                     <div class="content-product-item" >
-                        <div> <img src="/img/<%=data.vegetable[i].image_path.slice(10)%>" alt="" width="245px" height="200px"></div>
+                        <div onclick="goToProduct('<%=data.vegetable[i].visible_id%>')">
+                            <img src="/img/<%=data.vegetable[i].image_path.slice(10)%>" alt="" width="245px" height="200px">
+                        </div>
+                          
                              <div class="title-content"><%=data.vegetable[i].pro_name%></div>
                                  <div class="price-buy">
                                        <span>SL:<%=data.vegetable[i].pro_quantity%></span>
