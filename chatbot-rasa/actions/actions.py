@@ -117,8 +117,10 @@ class QueryProduct(Action):
             product_price = row[2]
             image_path = row[3]
 
+
             # Hiển thị kết quả truy vấn
-            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ, Hình ảnh: {}".format(product_id, product_name, product_price, image_path ))
+            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ".format(product_id, product_name, product_price))
+            dispatcher.utter_image(image_path.slice(10))
 
         # Đóng kết nối đến cơ sở dữ liệu
         cursor.close()

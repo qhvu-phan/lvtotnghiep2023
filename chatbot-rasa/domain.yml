@@ -20,13 +20,8 @@ intents:
   - about_vegetable
   - about_noodle
   - about_fish
-<<<<<<< HEAD
-  - about_caixanh
-  - about_mibamien
-  - about_thitbo
-=======
   - about_product
->>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
+
 
 actions:
   - action_show_time
@@ -92,26 +87,6 @@ responses:
   - text: "Bây giờ tôi sẽ hiển thị danh sách sản phẩm:"
 
 
-  utter_about_caixanh:
-  - text: "Có phải bạn đang muốn tìm loại cải này không?"
-    image: "https://davifarm.com.vn/wp-content/uploads/2022/08/Cach-lam-thit-bo-cuon-la-cai-be-xanh-nhanh-gon-le-3-1.jpg"
-
-  utter_about_caixanh_1:
-  - text: "Cửa hàng có bán rất nhiều loại rau khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/vegetable. Bạn cần tôi giúp gì không nào?"
-
-  utter_about_thitbo:
-  - text: "Có phải bạn đang muốn tìm loại thịt bò này không?"
-    image: "https://bongon.vn/static/team/2015/1013/14447117093544.jpg"
-
-  utter_about_thitbo_1: 
-  - text: "Cửa hàng có bán rất nhiều loại thịt khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/meat. Bạn cần tôi giúp gì không nào?"
-
-  utter_about_mibamien:
-  - text: "Có phải bạn đang muốn tìm loại mì ba miền này không?"
-    image: "https://img.websosanh.vn/v2/users/root_product/images/mi-3-mien-tom-chua-cay-65g-/lacmrymmvt8yn.jpg"
-
-  utter_about_mibamien_1:
-  - text: "Cửa hàng có bán rất nhiều loại mì khác nhau. Bạn có thể tham khảo tại đây http://localhost:5000/noodles. Bạn cần tôi giúp gì không nào?"
 
 session_config:
   session_expiration_time: 60
