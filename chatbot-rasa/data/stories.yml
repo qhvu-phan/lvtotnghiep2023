@@ -140,12 +140,6 @@ stories:
   - action: utter_about_thitbo
   - action: utter_about_thitbo_1
 
-- story: path about mi ba mien
-  steps:
-  - intent: about_mibamien
-  - action: utter_about_mibamien
-  - action: utter_about_mibamien_1
-=======
 - story: path about product
   steps:
   - intent: about_product
