@@ -3,6 +3,7 @@ var cartsApi = "http://localhost:5000/cart";
 let search_value = document.querySelector(".topbar-search-input");
 const search_container = document.querySelector(".topbar-search_product_item");
 let listProducts = [];
+let listProducts3 = [];
 
 function handleEventOninput() {
   search_value.addEventListener("input", () => {
@@ -41,34 +42,61 @@ function searchProduct(value) {
   const regex = new RegExp(`${convertValue.toLowerCase()}`);
   var listProduct = document.querySelector(".search-product-list");
   var html = listProducts.map((product) => {
-    if (regex.test(product.pro_name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) || 
-        regex.test(product.pro_description.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) ||
-        regex.test(product.pro_price.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase())) {
-      return `
-        <div class="search-prouduct-item">
-             <div class="product-item-img">
-                 <img src="/img/${product.image_path.slice(
-                   10
-                 )}" width="50px" height="50px" alt="">
-             </div>
-             <div class="product-item-content">
-                 <div class="product-item-name">${product.pro_name}</div>
-                 <div class="product-item-price">${
-                   product.pro_price
-                 }<u>đ</u></div>
-             </div>
-             <div class="product-item-select">
-                 <button onclick="handleBuyProduct('${
-                   product.visible_id
-                 }')">Mua</button>
-             </div>
-        </div>
-     `;
+    if (regex.test(product.pro_name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) 
+       //|| regex.test(product.pro_description.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase()) ||
+       // regex.test(product.pro_price.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase())
+        ) {
+           listProducts3.push(product);
     }
   });
-  search_container.style.display = "block";
-  listProduct.innerHTML = html.join("");
+ render();
 }
+
+function render(){
+  var listProduct = document.querySelector(".search-product-list");
+  if(listProducts3.length !== 0){
+    var html = listProducts3.map((product) =>{
+      return `
+      <div class="search-prouduct-item">
+           <div class="product-item-img">
+               <img src="/img/${product.image_path.slice(
+                 10
+               )}" width="50px" height="50px" alt="">
+           </div>
+           <div class="product-item-content">
+               <div class="product-item-name">${product.pro_name}</div>
+               <div class="product-item-price">${
+                 product.pro_price
+               }<u>đ</u></div>
+               <div class="more_infor" style="font-size:10px;">
+                  <p>Xuất xứ: ${product.pro_description}, Loại: ${product.pro_type}</p>
+                </div>
+           </div>
+           <div class="product-item-select">
+               <button onclick="handleBuyProduct('${
+                 product.visible_id
+               }')">Mua</button>
+           </div>
+      </div>
+   `;
+    })
+    search_container.style.display = "block";
+    listProduct.innerHTML = html.join("");
+  } else {
+    let empty = [1];
+    var html = empty.map((temp) => {
+      return `
+      <div class="search-prouduct-item" style="text-align:center;">
+           <div>
+              Không có sản phẩm nào phù hợp
+      </div>
+   `;
+    })
+   search_container.style.display = "block";
+   listProduct.innerHTML = html.join("");
+    }  
+}
+
 function handleBuyProduct(id) {
   let data = {
     cart_user_id: "Yw8m41eVXwv4PS9HlDNJ",

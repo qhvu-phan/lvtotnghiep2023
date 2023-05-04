@@ -25,3 +25,9 @@
 .close_button {
     cursor: pointer;
 }
+.more_infor {
+    display: none;
+}
+.search-prouduct-item:hover .more_infor {
+    display: inline;
+}
