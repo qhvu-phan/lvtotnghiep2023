@@ -10,6 +10,15 @@
     "rule_only_loops": [],
     "rules_for_loop_unhappy_path": {},
     "rules_not_in_stories": [
+<<<<<<<< HEAD:chatbot-rasa/.rasa/cache/tmpi5kvrif_/rule_policy.json
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]"
+========
       "predicting default action with intent session_start",
       "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
       "predicting default action with intent restart",
@@ -17,6 +26,7 @@
       "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
       "predicting default action with intent back",
       "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]"
+>>>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5:chatbot-rasa/.rasa/cache/tmp2ly3m_bx/rule_policy.json
     ]
   }
 }

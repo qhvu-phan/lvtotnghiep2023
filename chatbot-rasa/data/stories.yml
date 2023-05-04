@@ -127,9 +127,29 @@ stories:
   - intent: about_fish
   - action: utter_about_fish
 
+<<<<<<< HEAD
+- story: path about cai xanh
+  steps:
+  - intent: about_caixanh
+  - action: utter_about_caixanh
+  - action: utter_about_caixanh_1
+
+- story: path about thit bo
+  steps:
+  - intent: about_thitbo
+  - action: utter_about_thitbo
+  - action: utter_about_thitbo_1
+
+- story: path about mi ba mien
+  steps:
+  - intent: about_mibamien
+  - action: utter_about_mibamien
+  - action: utter_about_mibamien_1
+=======
 - story: path about product
   steps:
   - intent: about_product
   - action: utter_about_product
   - action: action_query_product
 
+>>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
