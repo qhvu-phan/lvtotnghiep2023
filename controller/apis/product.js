@@ -95,6 +95,46 @@ router.get("/:id", (req, res) => {
     }
   });
 });
+router.get("/details/:id", (req, res) => {
+  const id = req.params.id;
+  query = ` select * from product where visible_id = '${id}' and is_Active = 1`;
+  connection.query(query, (err, result) => {
+    if (err) return res.status(400).json({ success: false, message: "error" });
+    if (result.length > 0) {
+      let visible_id = result[0].visible_id;
+      let pro_name = result[0].pro_name;
+      let pro_type = result[0].pro_type;
+      let pro_nutritional = result[0].pro_nutritional;
+      let pro_description = result[0].pro_description;
+      let pro_price = result[0].pro_price;
+      let getImage = ` select * from image where image_pro_id=
+                                                                   '${visible_id}' and is_Active = 1 `;
+      connection.query(getImage, function (error, results) {
+        if (error)
+          return res
+            .status(400)
+            .json({ success: false, message: "Error getImage" });
+        let cache = {
+          image_path: results[0].image_path,
+          visible_id: visible_id,
+          pro_name: pro_name,
+          pro_type: pro_type,
+          pro_nutritional: pro_nutritional,
+          pro_description: pro_description,
+          pro_price: pro_price,
+        };
+        return res
+          .status(200)
+          .json({ success: true, message: "success", cache });
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "empty product", cache: [] });
+    }
+  });
+});
+
 router.post("/", middleware.checkProduct, (req, res) => {
   const visible_id = random.generate(20);
   const { pro_name, pro_type, pro_nutritional, pro_price } = req.body;

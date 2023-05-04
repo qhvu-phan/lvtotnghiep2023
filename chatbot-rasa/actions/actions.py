@@ -117,16 +117,8 @@ class QueryProduct(Action):
             product_price = row[2]
             image_path = row[3]
 
-            # Đọc file byte của hình ảnh
-            with open(image_path, "rb") as f:
-                image_bytes = f.read()
-
-            # Tạo đối tượng hình ảnh
-            image = Image.open(io.BytesIO(image_bytes))
-
             # Hiển thị kết quả truy vấn
-            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ".format(product_id, product_name, product_price))
-            dispatcher.utter_image(image)
+            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ, Hình ảnh: {}".format(product_id, product_name, product_price, image_path ))
 
         # Đóng kết nối đến cơ sở dữ liệu
         cursor.close()

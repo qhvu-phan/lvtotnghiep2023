@@ -86,8 +86,17 @@ function handleBuyProduct(id) {
       }
     });
 }
-function goToProduct(id) {
-  window.location.href = "http://localhost:5000/details/" + id;
+
+function goToProduct(visibleId, imagePath, productName, quantity, price) {
+  sessionStorage.setItem('productInfo', JSON.stringify({
+    visibleId: visibleId,
+    imagePath: imagePath,
+    productName: productName,
+    quantity: quantity,
+    price: price
+  }));
+  window.location.href = "http://localhost:5000/details/";
 }
+
 handleCheckCart();
 handleEventBuyButton();
