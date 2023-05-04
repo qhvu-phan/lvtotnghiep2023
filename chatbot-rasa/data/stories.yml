@@ -2,6 +2,9 @@ version: "3.1"
 
 stories:
 
+* greet
+  - utter_greet
+  
 - story: happy path
   steps:
   - intent: greet
@@ -124,6 +127,7 @@ stories:
   - intent: about_fish
   - action: utter_about_fish
 
+<<<<<<< HEAD
 - story: path about cai xanh
   steps:
   - intent: about_caixanh
@@ -141,3 +145,11 @@ stories:
   - intent: about_mibamien
   - action: utter_about_mibamien
   - action: utter_about_mibamien_1
+=======
+- story: path about product
+  steps:
+  - intent: about_product
+  - action: utter_about_product
+  - action: action_query_product
+
+>>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
