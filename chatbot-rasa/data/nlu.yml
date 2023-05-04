@@ -172,35 +172,12 @@ nlu:
     - tôi có thể xem cá ở đâu?
     - cá
 
-<<<<<<< HEAD
-- intent: about_caixanh
-  examples: |
-    - có bán cải xanh không?
-    - tôi cần mua cải xanh
-    - tôi có thể xem cải xanh ở đâu?
-    - cải xanh
-
-- intent: about_mibamien
-  examples: |
-    - có bán mì ba miền không?
-    - tôi cần mua mì ba miền
-    - tôi có thể xem mì ba miền ở đâu?
-    - mì ba miền
-
-- intent: about_thitbo
-  examples: |
-    - có bán thịt bò không?
-    - tôi cần mua thịt bò
-    - tôi có thể xem thịt bò ở đâu?
-    - thịt bò
-=======
 - intent: about_product
   examples: |
     - cho tôi xem danh sách sẳn phẩm ?
     - trang web có bán những sản phẩm gì ?
 
 
->>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
 
 
 

@@ -20,13 +20,7 @@ intents:
   - about_vegetable
   - about_noodle
   - about_fish
-<<<<<<< HEAD
-  - about_caixanh
-  - about_mibamien
-  - about_thitbo
-=======
   - about_product
->>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
 
 actions:
   - action_show_time

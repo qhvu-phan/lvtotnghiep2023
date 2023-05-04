@@ -1,155 +1,132 @@
 version: "3.1"
 
 stories:
-
-* greet
-  - utter_greet
   
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: happy path
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_great
+    - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: sad path 1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: sad path 2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
 
-- story: path about time
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
+  - story: path about time
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_time
+    - action: action_show_time
 
-- story: path about girl friend
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: girl_friend
-  - action: utter_girl_friend
+  - story: path about girl friend
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: girl_friend
+    - action: utter_girl_friend
 
-- story: path about buy product
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: buy_product
-  - action: utter_buy_product
+  - story: path about buy product
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: buy_product
+    - action: utter_buy_product
 
-- story: path about view history order
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: view_history
-  - action: utter_view_history
+  - story: path about view history order
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: view_history
+    - action: utter_view_history
 
-- story: path about register account
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: help_customer
-  - action: utter_help_customer
-  - intent: register_account
-  - action: utter_register_account
+  - story: path about register account
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: help_customer
+    - action: utter_help_customer
+    - intent: register_account
+    - action: utter_register_account
 
-- story: path about voice search
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: help_customer
-  - action: utter_help_customer
-  - intent: voice_search
-  - action: utter_voice_search
+  - story: path about voice search
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: help_customer
+    - action: utter_help_customer
+    - intent: voice_search
+    - action: utter_voice_search
 
-- story: path about who are you
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: who
-  - action: utter_who
-  - intent: help_customer
-  - action: utter_help_customer
+  - story: path about who are you
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: who
+    - action: utter_who
+    - intent: help_customer
+    - action: utter_help_customer
 
-- story: path about register account 1
-  steps:
-  - intent: register_account
-  - action: utter_register_account
+  - story: path about register account 1
+    steps:
+    - intent: register_account
+    - action: utter_register_account
 
-- story: path about voice search 1
-  steps:
-  - intent: voice_search
-  - action: utter_voice_search
+  - story: path about voice search 1
+    steps:
+    - intent: voice_search
+    - action: utter_voice_search
 
-- story: path about view history order 1
-  steps:
-  - intent: view_history
-  - action: utter_view_history
+  - story: path about view history order 1
+    steps:
+    - intent: view_history
+    - action: utter_view_history
 
-- story: path about buy product 1
-  steps:
-  - intent: buy_product
-  - action: utter_buy_product
+  - story: path about buy product 1
+    steps:
+    - intent: buy_product
+    - action: utter_buy_product
 
-- story: path about vegetbale
-  steps:
-  - intent: about_vegetable
-  - action: utter_about_vegetable
+  - story: path about vegetbale
+    steps:
+    - intent: about_vegetable
+    - action: utter_about_vegetable
 
-- story: path about meat
-  steps:
-  - intent: about_meat
-  - action: utter_about_meat
+  - story: path about meat
+    steps:
+    - intent: about_meat
+    - action: utter_about_meat
 
-- story: path about noodel
-  steps:
-  - intent: about_noodle
-  - action: utter_about_noodle
+  - story: path about noodel
+    steps:
+    - intent: about_noodle
+    - action: utter_about_noodle
 
-- story: path about fish
-  steps:
-  - intent: about_fish
-  - action: utter_about_fish
+  - story: path about fish
+    steps:
+    - intent: about_fish
+    - action: utter_about_fish
 
-<<<<<<< HEAD
-- story: path about cai xanh
-  steps:
-  - intent: about_caixanh
-  - action: utter_about_caixanh
-  - action: utter_about_caixanh_1
+  - story: path about product
+    steps:
+    - intent: about_product
+    - action: utter_about_product
+    - action: action_query_product
 
-- story: path about thit bo
-  steps:
-  - intent: about_thitbo
-  - action: utter_about_thitbo
-  - action: utter_about_thitbo_1
-
-- story: path about mi ba mien
-  steps:
-  - intent: about_mibamien
-  - action: utter_about_mibamien
-  - action: utter_about_mibamien_1
-=======
-- story: path about product
-  steps:
-  - intent: about_product
-  - action: utter_about_product
-  - action: action_query_product
-
->>>>>>> ccfed4197b6c7e906d1270befa6bc986f154e5c5
