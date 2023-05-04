@@ -22,7 +22,6 @@ intents:
   - about_fish
   - about_product
 
-
 actions:
   - action_show_time
   - action_query_product
