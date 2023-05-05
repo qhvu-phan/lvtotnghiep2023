@@ -9,13 +9,6 @@
 
 import datetime as dt 
 from typing import Any, Text, Dict, List
-
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-
-import datetime as dt 
-from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import mysql.connector
@@ -117,14 +110,17 @@ class QueryProduct(Action):
             product_price = row[2]
             image_path = row[3]
 
+            # Cắt bỏ 10 kí tự đầu tiên của đường dẫn và thêm đường dẫn 'img/'
+            image_path = 'img/' + image_path[10:]
 
-            # Hiển thị kết quả truy vấn
-            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ".format(product_id, product_name, product_price))
-            dispatcher.utter_image(image_path.slice(10))
+            # Tạo attachment với key 'image'
+            attachment = {"type": "image", "payload": {"src": image_path}}
+
+            # Hiển thị kết quả truy vấn và hình ảnh
+            dispatcher.utter_message(text="ID sản phẩm: {}, Tên sản phẩm: {}, Giá: {} VNĐ".format(product_id, product_name, product_price), attachment=attachment)
 
         # Đóng kết nối đến cơ sở dữ liệu
         cursor.close()
         cnx.close()
 
         return []
-    
