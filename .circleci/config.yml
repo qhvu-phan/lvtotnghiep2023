@@ -32,7 +32,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "21:ee:11:09:1a:77:a9:3f:4a:69:e6:76:4d:db:f0:8a"
-      - run: ssh -oStrictHostKeyChecking=no ubuntu@152.69.173.110 './my-express-app/deploy.sh'
+      - run: ssh -oStrictHostKeyChecking=no ubuntu@152.69.173.110 './deploy.sh'
 
 workflows:
   my-pipeline:
