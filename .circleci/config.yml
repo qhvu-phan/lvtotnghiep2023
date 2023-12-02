@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: my-express-app
+      DOCKER_IMAGE: vupqh/my-express-app
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
