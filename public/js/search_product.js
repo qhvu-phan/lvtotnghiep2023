@@ -49,10 +49,10 @@ function searchProduct(value) {
            listProducts3.push(product);
     }
   });
- render();
+ renderNormal();
 }
 
-function render(){
+function renderNormal(){
   var listProduct = document.querySelector(".search-product-list");
   if(listProducts3.length !== 0){
     var html = listProducts3.map((product) =>{
