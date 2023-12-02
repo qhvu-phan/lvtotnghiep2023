@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const connection = require("../../public/connection.js");
-const random = require("randomString");
+const random = require("randomstring");
 const middleware = require("../middleware/image.middleware.js");
 let query;
 

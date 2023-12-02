@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const cookieParser = require("cookie-parser");
 const product = require("./controller/apis/product.js");
@@ -15,6 +16,7 @@ const connectDB = require('./models/connectDB');
 app.use(express.static("public")); //set static file
 app.set("view engine", "ejs"); //use view engine
 app.set("views", "./view"); //use view engine
+
 
 app.use(cookieParser());
 app.use(express.json()); //use jsonfile
@@ -56,7 +58,7 @@ app.use("/orders", orders);
 app.use("/order_details", order_details);
 require("./view/tesst")(app);
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log("My server is running on" + " " + port);
 });

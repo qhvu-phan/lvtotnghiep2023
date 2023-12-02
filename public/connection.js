@@ -16,7 +16,8 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) {
         console.log(err);
-        throw err;
+        console.log(process.env.DB_HOST + "" + process.env.DB_USER + "" + process.env.DB_PASS)
+        // throw err;
     };
     console.log('Database is connected successfully !');
 });

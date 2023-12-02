@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router(); // navigation
-const random = require("randomString");
+const random = require("randomstring");
 const connection = require("../../public/connection.js"); // use connection
 const middleware = require("../middleware/product.middleware.js");
 let query;
